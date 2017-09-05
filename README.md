@@ -24,7 +24,39 @@ In the `build.gradle` for your app include:
 ```gradle
 compile 'com.newtronlabs.easyscreenshot:easyscreenshot:0.0.1'
 ```
+### Step 2
 
+Sample on how to use it.
+
+```java
+public class MainActivity extends AppCompatActivity implements ICaptureListener
+{
+    private static final String TAG = "EasyScreenshot";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        ScreenshotAdapter.getInstance().capture(this, this);
+    }
+
+    @Override
+    public void onResult(@Result int result, Bitmap bitmap)
+    {
+        if(result == Result.FAILED)
+        {
+            Log.d(TAG, "Failed");
+            return;
+        }
+
+        Log.d(TAG, "Succeeded");
+
+        boolean res = ScreenshotAdapter.getInstance().saveToFolder(bitmap, "Screenshots", "MyScreenshot");   
+    }
+}
+```
 
 ---
 

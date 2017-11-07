@@ -33,7 +33,7 @@ allprojects {
 In the `build.gradle` for your app include:
 
 ```gradle
-apply plugin: 'com.newtronlabs.android
+apply plugin: 'com.newtronlabs.android'
 
 dependencies {
     provided 'com.newtronlabs.easyscreenshot:easyscreenshot:2.0.0'

@@ -11,6 +11,17 @@ The easy way to take screenshots of your application programmatically.
 Include the below dependency in your `build.gradle` project.
 
 ```gradle
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath "com.newtronlabs.android:plugin:1.0.0"
+    }
+}
+
 allprojects {
     repositories {
         jcenter()
@@ -22,8 +33,11 @@ allprojects {
 In the `build.gradle` for your app include:
 
 ```gradle
-compile 'com.newtronlabs.easyscreenshot:easyscreenshot:0.0.1'
+dependencies {
+    provided 'com.newtronlabs.easyscreenshot:easyscreenshot:2.0.0'
+}
 ```
+
 ### Step 2
 
 Sample on how to use it.

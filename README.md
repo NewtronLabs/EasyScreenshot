@@ -28,13 +28,15 @@ allprojects {
         maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
     }
 }
+
+subprojects {
+    apply plugin: 'com.newtronlabs.android'
+}
 ```
 
 In the `build.gradle` for your app include:
 
 ```gradle
-apply plugin: 'com.newtronlabs.android'
-
 dependencies {
     provided 'com.newtronlabs.easyscreenshot:easyscreenshot:2.0.0'
 }

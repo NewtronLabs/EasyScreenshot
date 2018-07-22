@@ -1,7 +1,3 @@
-Please take a few minutes and let us know how we are doing by filling out this survey: https://goo.gl/forms/97TYeG6Wx5CA4lBV2
-
----
-
 # Easy Screenshot
 
 The easy way to take screenshots of your application programmatically.
@@ -92,4 +88,4 @@ You are solely responsible for determining the appropriateness of using Easy Scr
 
 ## Contact
 
-contact@newtronlabs.com
+solutions@newtronlabs.com

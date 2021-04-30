@@ -14,7 +14,11 @@ Include the below dependency in your `build.gradle` project.
 buildscript {
     repositories {
         jcenter()
-        maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
+        maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local"
+            metadataSources {
+                artifact()
+            }
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.3'
@@ -25,7 +29,11 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
+        maven { url "https://newtronlabs.jfrog.io/artifactory/libs-release-local"
+            metadataSources {
+                artifact()
+            }
+        }
     }
 }
 
